@@ -1,0 +1,326 @@
+<!doctype HTML>
+<meta charset="UTF-8"> 
+<meta title="Terseness">
+
+<head>
+
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400i,500i|Raleway:500,200i|Alegreya+Sans:700|Open+Sans:700i|Playfair+Display|Josefin+Sans:700" rel="stylesheet"> 
+	<link href="./terseness-files/terseness.css" rel="stylesheet">
+
+<script src="./js/jquery-3.3.1.js"></script>
+<script src="./js/jquery.color-2.1.0.js"></script>
+<script src="./js/jquery.transit.min.js"></script>
+<script src="./terseness-files/terseness.js"></script>
+<!-- <script>
+	$(document).ready(function(){ 
+    //** notice we are including jquery and the color plugin at 
+    //** http://code.jquery.com/color/jquery.color-2.1.0.js
+    
+    //** adapted from http://jsfiddle.net/cgspicer/V4qh9/
+    
+    var scroll_pos = 0;
+    var animation_pos_1a = 300; //where you want the animation to begin
+    var animation_pos_1b = 1000; //where you want the animation to stop
+    var animation_pos_2a = 1500; //animation 2 start
+    var animation_pos_2b = 2500; //animation 2 end
+    var pos = [300, 1000, 1500, 2500];
+    var color_1 = new $.Color( 'rgb(0,35,0)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
+    var color_2 = new $.Color( 'rgb(34,0,0)' );     
+    var color_3 = new $.Color( 'rgb(35,34,100)' );
+    var color_4 = new $.Color( 'rgb(238,171,161)' );
+    
+    $('.page').scroll(function() {
+    
+    
+    
+        scroll_pos = $(this).scrollTop(); 
+        if (scroll_pos < pos[0]) {
+        		$('body').animate({ backgroundColor: color_1 }, 0);
+        } else if(scroll_pos >= pos[0] && scroll_pos <= pos[1] ) { 
+            //we want to calculate the relevant transitional rgb value
+            var percentScrolled =  ( (scroll_pos - pos[0])  / (pos[1] - pos[0]) );
+            var newRed = color_1.red() + ( ( color_2.red() - color_1.red() ) * percentScrolled );
+            var newGreen = color_1.green() + ( ( color_2.green() - color_1.green() ) * percentScrolled );
+            var newBlue = color_1.blue() + ( ( color_2.blue() - color_1.blue() ) * percentScrolled );
+            var newColor1 = new $.Color( newRed, newGreen, newBlue );
+            console.log( newRed );
+            $('body').animate({ backgroundColor: newColor1 }, 0);
+        } else if ( scroll_pos > pos[1] && scroll_pos < pos[2] ) {
+            var percentScrolled = ( scroll_pos - pos[1] ) / ( pos[2] - pos[1] );
+             $('body').animate({ backgroundColor: color_2 }, 0);
+             /* $('#nola').css({
+             	'opacity' : percentScrolled
+             	}); */
+        } else if ( scroll_pos >= pos[2] && scroll_pos <= pos[3] ) {
+            var percentScrolled = ( (scroll_pos - pos[2]) / ( pos[3] - pos[2] ) );
+            var newRed = color_2.red() + ( ( color_3.red() - color_2.red() ) * percentScrolled );
+            var newGreen = color_2.green() + ( ( color_3.green() - color_2.green() ) * percentScrolled );
+            var newBlue = color_2.blue() + ( ( color_3.blue() - color_2.blue() ) * percentScrolled );
+            var newColor2 = new $.Color( newRed, newGreen, newBlue );
+            $('body').animate({ backgroundColor: newColor2 }, 0);
+        } else if ( scroll_pos > pos[3] ) {
+				$('body').animate({ backgroundColor: color_3 }, 0);        
+         }
+         else { }
+    });
+    
+
+});
+
+</script> -->
+
+
+</head>
+
+<body>
+
+	<title>Terseness</title>
+
+<div id="loading">
+	<div id="line-container">
+		
+	</div>
+	<div id="loading-text">
+		<div id="loading-title">terseness</div>
+		<div id="loading-subtitle">Loading</div>
+	</div>
+</div>
+
+<div class="page">
+
+	<div class="parallax_layer cover-img"> </div>
+
+	<div class="parallax_layer title-text-container">
+		<div class="title">terseness</div>
+		<div class="subtitle">by Jeremy Sparagon</div>
+	</div>
+
+	<div class="formats_container">
+		<div class="formats"><a target="_blank" href="./terseness-files/terseness_print_201811.pdf">print</a></div>
+		<div class="formats">
+			web
+			<img id="format-arrow" src="./terseness-files/down_arrow.svg">
+		</div>
+	</div>
+
+<div class="parallax_layer ch1_flex" style="padding-top: 100vh">
+	<div class="ch1_img nola"></div>
+	<div class="ch1_text nola">
+		<p class="justified">
+			<span style="white-space: nowrap">as long as you know</span>
+			<span style="white-space: nowrap">how hot your laundry</span>
+			<span style="white-space: nowrap">is when you want to</span>
+			<span style="white-space: nowrap">be alone</span>
+		</p>
+	</div>
+
+	<div class="ch1_img moved"></div>
+	<div class="ch1_text moved">
+		<p class="justified moved" style="text-align-last: justify; -moz-text-align-last: justify;">
+			<span style="white-space: nowrap">as long as</span>
+			<span style="white-space: nowrap">you know</span>
+			<span style="white-space: nowrap">who moved</span>
+			<span style="white-space: nowrap">and how far</span>
+		</p>
+	</div>
+
+
+	<div class="ch1_img kira">
+		<div class="kira_img"></div>
+	</div>
+
+	<div class="ch1_text kira">
+		<p class="justified kira" style="text-align-last: justify; -moz-text-align-last: justify; /* Code for Firefox */">
+			<span style="white-space: nowrap">as long as you know</span>
+			<span style="white-space: nowrap">whether or not</span>
+			<span style="white-space: nowrap">it's still early autumn</span>
+			<span style="white-space: nowrap"> </span>
+		</p>
+	</div>
+
+
+	<svg id="kira_line" preseve-aspect-ratio="xMinyMin" viewBox="0 0 100 100">
+		<polyline fill="none" stroke="rgb(35,0,0)" stroke-width="0.5" stroke-linejoin="round"
+			points="50,5.6 5,5.6 5,45 72,45 72,15"/>
+	</svg>
+
+</div>
+
+
+	<div class="parallax_layer white_sands_text first">
+		do you feel like you have too <br>
+		many choices or too few?
+	</div>
+	
+	<div class="parallax_layer white_sands_bg"></div>
+	
+	<div class="parallax_layer white_sands_text last">
+		what was the last song that <br>
+		was stuck in your head?
+	</div>
+
+	<div class="flowers_flex">
+		<div class="flowers_img"></div>
+		<div class="flowers_text_container">
+			<div class="flowers_artists">St. Vincent</div><div class="flowers_songs">Slow Disco</div>
+			<div class="flowers_artists">Kelela</div><div class="flowers_songs">Altadena</div>
+			<div class="flowers_artists">Beach House</div><div class="flowers_songs">Somewhere Tonight</div>
+			<div class="flowers_artists">Kristin Kontrol</div><div class="flowers_songs">(Don't) Wannabe</div>
+			<div class="flowers_artists">Blood Orange</div><div class="flowers_songs">It Is What It Is</div>
+			<div class="flowers_artists">SOPHIE</div><div class="flowers_songs">BIPP</div>
+			<div class="flowers_artists">Cults</div><div class="flowers_songs">Right Words</div>
+			<div class="flowers_artists">Spiritualized</div><div class="flowers_songs" style="margin-bottom:1vh">Ladies and Gentlemen We Are Floating In Space</div>
+			<div class="flowers_artists">FKA twigs</div><div class="flowers_songs">Good to Love</div>
+
+			<div class="flowers_button_container">
+				<a class="button" style="background-image: url(./terseness-files/spotify.png)" target="_blank" href="https://open.spotify.com/user/1243305632/playlist/4zeo3jNe6vC1nRbY3LeoF2">
+				</a>
+				<a class="button" target="_blank" href="https://music.youtube.com/playlist?list=PLo-eSeETUFl5BvzmlCDdUb-7-KfTFzHD6">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="ch3_flex">
+		<div class="ch3_colors">
+			<div class="ch3_colors_a1"></div>
+			<div class="ch3_colors_a2"></div>
+			<div class="ch3_colors_b1"></div>
+			<div class="ch3_colors_b2"></div>
+		</div>
+
+		<div class="ch3_img_container">
+			<div class="ch3_img" style="background-image: url(./terseness-files/coos_bay.jpg)"></div>
+			<div class="ch3_img" style="background-image: url(./terseness-files/green_gulch.jpg)"></div>
+		</div>
+	</div>
+
+	<div class="ch4_flex">
+		<img class="ch4_img" src="./terseness-files/hallway.jpg">
+		<img class="ch4_img" src="./terseness-files/mira.jpg" style="margin-bottom: 50vh">
+		<img class="ch4_img" src="./terseness-files/dimness.jpg" style="margin-top: 50vh">
+		<img class="ch4_img" src="./terseness-files/greenhouse.jpg">
+	</div>
+
+	<div class="ch5a">
+		<div class="ch5a_text">
+		over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over and over <br>
+		week after week after week after week after week after week after week after week after week after week after week after week after week after week after week after week after week
+		</div>
+	</div>
+
+	<div class="ch5b">
+		<div class="ch5b_imgs first"></div>
+		<div class="ch5b_imgs second"></div>
+		<div class="ch5b_imgs third">
+			my friends ask me why i listen to my music so loudly. i say i must have destroyed my hearing. but i think it’s because i don’t want to be able to possess it— i guess it’s just more powerful if it’s not mine
+			<br><br>
+			also i'm destroying my hearing
+		</div>
+	</div>
+
+	<div class="ch6_container">
+		<!-- <svg width="100%" height="50%" style="position: absolute; z-index: -1">
+			<line x1="-5%" y1="60%" x2="90%" y2="60%" stroke-width="0.75vh" stroke-linecap="round" stroke="rgb(154,34,33)"></line>
+		</svg> -->
+
+		<div class="parallax_layer ch6_text">
+			<svg width="200%" viewBox="0 0 100 100" style="overflow: visible">
+				<line x1="-5%" y1="3%" x2="80%" y2="3%" stroke-width="0.05vh" stroke-linecap="round" stroke="rgb(154,34,33)"></line>
+			</svg>
+
+		</div>
+
+		<div class="parallax_layer ch6_text">twenty minutes
+			<div class="subtext">is a long time to wait but it's a matter <br> of postponement</div>
+		</div>
+	</div>
+
+	<div class="parallax_layer ch6_img"></div>
+
+	<div class="ch7_container">
+	<div class="ch7_text_container">
+		<div class="ch7_text left">
+			<span class="korean">쪽팔렸던 기억들은 이제</span> <br>
+			All your embarrassing memories <br>
+			<span class="korean">내후년 옆에 자연스럽게</span> <br>
+			Can be applied naturally right next to <br>
+			<span class="korean">도포하시면 되시는거구</span> <br>
+			The year after next year <br> <br>
+			<span class="citation" style="float: right">yaeji – last breath</span>
+		</div>
+
+		<!-- I HONESTLY CAN'T EVEN WORK ON THIS IF AVERY IS JUST GONNA SIT THERE ND BE ALL IRRITATING AND TALK ABT FUCKING APPLES W HIS NEW GF LAUREN. CAN THEY LIKE DO THIS SOMEWHERE ELSE PLSZZZ -->
+
+		<div class="ch7_text right">
+			<div>
+			One Thing is Needful. <br>
+			<p class="unbolded" style="padding-left: 1vw">
+			To “give style” to one’s character, that is a grand and a rare art!  He who surveys all that his nature presents in its strength and in its weakness, and then fashions it into an ingenious plan, until everything appears artistic and rational, and even the weaknesses enchant the eye…Here the ugly, which does not permit of being taken away, has been concealed, there it has been re-interpreted into the sublime.  Much of the vague, which refuses to take form, has been reserved and utilised for the perspectives: it is meant to give a hint of the remote and immeasurable.  
+			</p>
+			<br><br>
+			<span class="citation" style="float: left">
+				Nietzsche – The Gay Science, §290
+			</span>
+			</div>
+		</div>
+	<!-- </div> -->
+</div>
+</div>
+
+<div class="ch8_flex">
+	<div class="ch8_content first">
+		<div class="title">
+			WIN-<br>
+			DOW<br>
+			PANES
+		</div>
+		<div class="number">
+			5.
+		</div>
+	</div>
+	<div class="ch8_content second">
+		&nbsp; &nbsp; &nbsp; &nbsp; I don't think I have anything <br>profound to say about windows.
+		<br><br><br>
+		<p style="width: 100%; text-align: justify; text-justify: inter-word; -moz-text-align-last: justify; text-align-last: justify; padding-left: 2vw; padding-right: 0vw">
+			or about seeing the reflection of what's behind you,
+		</p>
+		<br><br><br><br>
+		while also looking in
+		<svg width="35vw" height="35vw" viewbox="0 0 100 100" style="overflow: visible">
+			<polyline fill="none" stroke="rgb(255,255,255)" stroke-width="0.75"
+				points="38,-2.5 75,-2.5 150,90"/>
+		</svg>
+		<p style="margin-top: -20vw; margin-left:15vw; transform: rotateZ(8deg)">
+			to somewhere more still
+		</p>
+		<p style="margin-top: 8vw; margin-left: 25vw">or out of one.</p>
+		
+	</div>
+
+	<div class="ch8_content third">
+		<svg width="100%" height="100%" viewbox="0 0 30 85" preserveAspectRatio="xMinYMin" style="overflow: visible; padding-left: 0; left: 0">
+			<polyline fill="none" stroke="rgb(255,255,255)" stroke-width="0.5"
+				points="-50,85 0,85 0,0 200,0"
+		</svg>
+		<p style="transform: rotateZ(-90deg) translateY(-20vw) translateX(54vh); width: 125%">
+			I just like the images they make— kind of fuzzy, and complex.
+		</p>
+	</div>
+
+	<div class="ch8_content fourth">
+
+	</div>
+</div>
+
+
+
+<img width="100%" height="75%" style="object-fit:cover; object-position: 0 0; transform: rotateZ(1.5deg)" src="./terseness-files/footer.svg">
+
+</div> <!-- page -->
+
+
+</body>
+
+
+</html>
