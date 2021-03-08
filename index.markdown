@@ -9,8 +9,13 @@ navOrder: 1
 
 ## Recent Projects
 
+### Keegan Construction
+[![screenshot of keeganconstruction.com](/assets/images/kc-screenshot.png)](https://keeganconstruction.com)
+
+Using: React, React Router, webpack, and SCSS.
+
 ### FADE skincare
-[![screenshot of fadeskincare.co](/assets/images/fade-screenshot.png)](https://fadeskincare.co)
+[![screenshot of fadeskincare.co](/assets/images/fade-screenshot-2.png)](https://fadeskincare.co)
 
 Using: React, Express, Node, mongoDB, HTML5, CSS3, nginx.
 
