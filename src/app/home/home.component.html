@@ -1,0 +1,9 @@
+<p>home works!</p>
+
+<app-project></app-project>
+
+<div *ngFor="let project of projects">
+  <div *ngIf="project.onHome">
+    <p>{{ project.title }}</p>
+  </div>
+</div>
