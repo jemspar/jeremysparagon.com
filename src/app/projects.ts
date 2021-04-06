@@ -1,4 +1,6 @@
-export const projects = [
+import {Project} from './project';
+
+export const projects: Project[] = [
   {
     id: 0,
     title: "Keegan Construction",

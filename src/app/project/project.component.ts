@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Project } from '../project';
+import { projects } from '../projects';
 
 @Component({
   selector: 'app-project',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  project = "project placeholder";
+  projects: Project[] = projects;
 
   constructor() { }
 

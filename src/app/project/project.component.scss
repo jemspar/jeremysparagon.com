@@ -1,7 +1,11 @@
 :host {
-  margin: 1ch;
-  border: 2px dotted darkblue;
+  .project {
+    margin: 1ch;
+    padding: 1ch;
+    border: 2px dotted white;
+    box-shadow: -2px 2px 8px black;
 
-  display: block;
-  width: calc(min( 600px, 98% ));
+    display: block;
+    width: calc(min( 600px, 98% ));
+  }
 }
