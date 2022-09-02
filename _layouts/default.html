@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+
+	<head>
+		<link rel="stylesheet" href="{{ "/assets/sass/styles.css" | relative_url }}">
+		{% if page.stylesheets %}
+			{% for stylesheet in page.stylesheets %}
+		<link rel="stylesheets" href="/assets/sass/{{ stylesheet }}">
+			{% endfor %}
+		{% endif %}
+
+		{% if page.scripts %}
+			{% for script in page.scripts %}
+				<script src="/assets/js/{{ script }}"></script>
+			{% endfor %}
+		{% endif %}
+
+	</head>
+
+
+
+
+	<body>
+		<nav>
+                  <div id="name">{{site.name}}</div>
+			{%- assign pages_rev = site.pages | reverse -%}
+			{% for page in pages_rev %}
+				{% if page.title %}<a href="{{ page.url | relative_url }}">{{ page.title }}</a>{% endif %}
+			{% endfor %}
+		</nav>
+		<main>
+			{{ content }}
+		</main>
+	</body>
+</html>
