@@ -29,9 +29,9 @@ url: "https://jeremysparagon.com"
 github_username:  jemspar
 
 # Build settings
-theme: jekyll-theme-jemspar
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
