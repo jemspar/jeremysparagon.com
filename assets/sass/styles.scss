@@ -45,21 +45,23 @@ html {
 	height: 100%;
 	padding: 0;
 
-        @lightness(light) {
+        @media (prefers-color-scheme: light) {
           --background: white;
           --text: black;
         }
 
-        @lightness(dark) {
+        @media (prefers-color-scheme: dark) {
           --background: black;
           --text: white;
         }
+
+        --columns-per-side: 4;
 }
 
 
 body {
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'Basier Square', 'Josefin Sans', sans-serif;
+	font-weight: 400;
 	font-size: 24px;
 	display: flex;
 	flex-direction: row;
@@ -69,6 +71,38 @@ body {
 	padding: 0;
 	background-color: var(--background);
 	color: var(--text);
+
+
+        display: grid;
+        grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95%) repeat(var(--columns-per-side),1fr); 
+
+        * {
+          // default column is center
+          grid-column: calc(var(--columns-per-side) + 1);
+        }
+
+        header {
+          grid-column: 1 / -1;
+
+          display: grid;
+          grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95%) repeat(var(--columns-per-side),1fr);
+
+          #head-img {
+            grid-column: 1 / -1;
+            height: auto;
+            max-width: 100%;
+            
+          }
+
+          #site-name {
+            grid-column: var(--columns-per-side) / calc(var(--columns-per-side) + 3); 
+            font-size: 3rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--text);
+          }
+
+        }
 }
 
 nav {
