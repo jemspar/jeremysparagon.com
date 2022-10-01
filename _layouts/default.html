@@ -25,15 +25,39 @@
           <header>
             <img id="head-img" src="/assets/images/P1080045-crop.png" />
             <div id="site-name">{{site.title}}</div>
+            <div id="site-description">{{site.description}}</div>
+
+            <nav>
+              {%- assign pages_rev = site.pages | reverse -%}
+                {% for page in pages_rev %}
+                {% if page.title %}<a href="{{ page.url | relative_url }}">{{ page.title }}</a>{% endif %}
+              {% endfor %}
+            </nav>
+
           </header>
-		<nav>
+          <!-- <nav>
                   <div id="name">{{site.name}}</div>
+                  
 			{%- assign pages_rev = site.pages | reverse -%}
 			{% for page in pages_rev %}
 				{% if page.title %}<a href="{{ page.url | relative_url }}">{{ page.title }}</a>{% endif %}
 			{% endfor %}
 		</nav>
+          -->
 		<main>
+
+                  {% for home-post in site.tags.home %}
+                    <article class="project"
+                             style="
+                                    --project-color-1: {{home-post.color-1}};
+                                    --project-color-2: {{home-post.color-2}};
+                                    --project-color-3: {{home-post.color-3}};
+                                    --project-color-4: {{home-post.color-4}}" >
+                                    <div class="title">{{home-post.title}}</div>
+                                    {{home-post}}
+                    </article>
+                  {% endfor %}
+                  <!-- <article class="project" style="--project-bg: #1c7a18"></article> -->
 			{{ content }}
 		</main>
 	</body>
