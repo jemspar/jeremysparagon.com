@@ -16,6 +16,12 @@
 			{% endfor %}
 		{% endif %}
 
+                {% if page.title %}
+                  <title>{{page.title}} | Jeremy Sparagon</title>
+                {% else %}
+                  <title>Jeremy Sparagon</title>
+                {% endif %}
+
 	</head>
 
 
