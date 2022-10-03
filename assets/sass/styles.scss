@@ -65,25 +65,21 @@ body {
   font-family: 'Heliotrope', sans-serif;
   font-weight: 400;
   font-size: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  
   margin:0;
   padding: 0;
   background-color: var(--background);
   color: var(--text);
 
-  display: grid;
-  grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95%) repeat(var(--columns-per-side),1fr); 
+//  display: grid;
+//  grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95%) repeat(var(--columns-per-side),1fr); 
 
-  * {
-    // default column is center
-    grid-column: calc(var(--columns-per-side) + 1);
-  }
+//  * {
+//    // default column is center
+//    grid-column: calc(var(--columns-per-side) + 1);
+//  }
 
   header {
-    grid-column: 1 / -1;
 
     display: grid;
     grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95vw) repeat(var(--columns-per-side),1fr);
