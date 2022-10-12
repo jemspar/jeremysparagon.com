@@ -6,6 +6,7 @@ layout: page
 navOrder: 1
 ---
 
+<!--
 
 ## Recent Projects
 
@@ -28,3 +29,5 @@ Using: Hugo, Lunr.js, jQuery, HTML5, CSS3.
 [![screenshot of Terseness](/assets/images/terseness-screenshot.png)](/terseness)
 
 Using: jQuery, HTML5, CSS3, Adobe CC 2019.
+
+-->

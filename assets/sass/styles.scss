@@ -1,6 +1,8 @@
 ---
 ---
 
+@charset "UTF-8";
+
 @use "fonts";
 
 $accent1: black;
@@ -82,7 +84,7 @@ body {
   header {
 
     display: grid;
-    grid-template-columns: repeat(var(--columns-per-side),1fr) min(600px,95vw) repeat(var(--columns-per-side),1fr);
+    grid-template-columns: repeat(var(--columns-per-side),1fr) calc(min(600px,95vw)) repeat(var(--columns-per-side),1fr);
 
     #head-img {
       grid-column: 1 / -1;
@@ -146,30 +148,40 @@ body {
 
   main {
 
-    article {
-      
-      &.project {
-        // background-color: var(--background);
-        // background-image:
-        // radial-gradient(at 10% 10%, var(--project-color-1) 0px, transparent 50%),
-        // radial-gradient(at 10% 90%, var(--project-color-2) 0px, transparent 50%),
-        // radial-gradient(at 90% 90%, var(--project-color-3) 0px, transparent 50%),
-        // radial-gradient(at 90% 10%, var(--project-color-4) 0px, transparent 50%);
-        border-radius: 0.5rem;
-        box-shadow: 0.1rem 0.1rem 0.3rem var(--text);
-        padding: 2rem;
-        min-height: 20rem;
-        width: 100%;
-        margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(var(--columns-per-side),1fr) calc(min(600px,95vw)) repeat(var(--columns-per-side),1fr);
+    margin-top: 10rem;
 
-        // color: scale(var(--text), $lightness: -20%);
+    #home-grid {
 
-        .title {
-          text-align: left;
-        } // title
-      }
-    } // article
+      grid-column: calc(var(--columns-per-side) + 1);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
 
+    
+      article {
+        
+        &.project {
+          // background-color: var(--background);
+          // background-image:
+          // radial-gradient(at 10% 10%, var(--project-color-1) 0px, transparent 50%),
+          // radial-gradient(at 10% 90%, var(--project-color-2) 0px, transparent 50%),
+          // radial-gradient(at 90% 90%, var(--project-color-3) 0px, transparent 50%),
+          // radial-gradient(at 90% 10%, var(--project-color-4) 0px, transparent 50%);
+          border-radius: 0.5rem;
+          box-shadow: 0.1rem 0.1rem 0.3rem var(--text);
+          margin: 0 2rem 0 2rem;
+          min-height: 20rem;
+          margin-bottom: 5rem;
+
+          // color: scale(var(--text), $lightness: -20%);
+
+          .title {
+            text-align: left;
+          } // title
+        }
+      } // article
+    } // main#home
   } // main
 }
 
@@ -204,14 +216,14 @@ nav {
 }
 
 main {
-	flex-basis: 70%;
-	width: 95%;
-	max-width: 1000px;
-	text-align: right;
-	display: flex;
-	flex-direction: column;
-	align-items: end;
-	padding-right: 5%;
+	// flex-basis: 70%;
+	// width: 95%;
+	// max-width: 1000px;
+	// text-align: right;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: end;
+	// padding-right: 5%;
 
 	a {
 		color: var(--text);
