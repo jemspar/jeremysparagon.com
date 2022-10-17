@@ -168,11 +168,14 @@ body {
           // radial-gradient(at 10% 90%, var(--project-color-2) 0px, transparent 50%),
           // radial-gradient(at 90% 90%, var(--project-color-3) 0px, transparent 50%),
           // radial-gradient(at 90% 10%, var(--project-color-4) 0px, transparent 50%);
-          border-radius: 0.5rem;
+          border-radius: 0rem;
           box-shadow: 0.1rem 0.1rem 0.3rem var(--text);
           margin: 0 2rem 0 2rem;
           min-height: 20rem;
           margin-bottom: 5rem;
+          border: 1px solid var(--text);
+          padding: 1ch;
+
 
           // color: scale(var(--text), $lightness: -20%);
 
