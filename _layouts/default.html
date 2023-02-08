@@ -50,19 +50,8 @@
 			{% endfor %}
 		</nav>
           -->
-		<main id="home">
-                  <div id="home-grid">
-                    {% for home-post in site.tags.home %}
-                      <article class="project">
-                                      <img class="main-img" src="/assets/images/{{home-post.thumb}}">
-                                      <div class="title">{{home-post.title}}</div>
-                                      <div class="medium">{{home-post.medium}}</div>
-                                      <div class="post-link"><a href="{{home-post.url}}">Details &rarr;</a></div>
-                      </article>
-                    {% endfor %}
-                  </div>
-                  <!-- <article class="project" style="--project-bg: #1c7a18"></article> -->
-			{{ content }}
-		</main>
+
+          {{content}}
+		
 	</body>
 </html>
