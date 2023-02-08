@@ -3,7 +3,7 @@
 
 
 	<head>
-		<link rel="stylesheet" href="{{ "/assets/sass/styles.css" | relative_url }}">
+		<link rel="stylesheet" href="/assets/sass/styles.css">
 		{% if page.stylesheets %}
 			{% for stylesheet in page.stylesheets %}
 		<link rel="stylesheets" href="/assets/sass/{{ stylesheet }}">
@@ -53,14 +53,11 @@
 		<main id="home">
                   <div id="home-grid">
                     {% for home-post in site.tags.home %}
-                      <article class="project"
-                               style="
-                                      --project-color-1: {{home-post.color-1}};
-                                      --project-color-2: {{home-post.color-2}};
-                                      --project-color-3: {{home-post.color-3}};
-                                      --project-color-4: {{home-post.color-4}}" >
+                      <article class="project">
+                                      <img class="main-img" src="/assets/images/{{home-post.thumb}}">
                                       <div class="title">{{home-post.title}}</div>
-                                      {{home-post}}
+                                      <div class="medium">{{home-post.medium}}</div>
+                                      <div class="post-link"><a href="{{home-post.url}}">Details &rarr;</a></div>
                       </article>
                     {% endfor %}
                   </div>

@@ -5,6 +5,8 @@ color-1: white
 color-2: white
 color-3: white
 color-4: white
+thumb: burl-print-thumb.png
+medium: Linocut print
 ---
 
 ## Linocut print. 2017
