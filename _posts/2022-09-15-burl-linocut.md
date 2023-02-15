@@ -1,6 +1,6 @@
 ---
 title: Burl
-tags: home
+tags: home completed
 color-1: white
 color-2: white
 color-3: white
