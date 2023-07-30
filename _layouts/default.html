@@ -34,6 +34,7 @@
             <div id="site-description">{{site.description}}</div>
 
             <nav>
+		    <a href="/">Home</a>
               {%- assign pages_rev = site.pages | reverse -%}
                 {% for page in pages_rev %}
                 {% if page.title %}<a href="{{ page.url | relative_url }}">{{ page.title }}</a>{% endif %}
