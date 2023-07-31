@@ -22,6 +22,14 @@ $text: black;
 @media (prefers-color-scheme: dark) {
   $background: rgb(25,25,25);
   $text: hsl(0deg, 100%, 100%);
+
+  a {
+	  color: hsl(217, 100%, 76%);
+	  &:visited {
+		  color: hsl(258, 100%, 76%);
+	  }
+  }
+
 }
 
 // MIXINS
@@ -141,6 +149,10 @@ body {
         background-color: transparent;
         text-transform: uppercase;
 
+	&:visited {
+		color: var(--text);
+	}
+
       }
     } // nav
 
@@ -150,7 +162,8 @@ body {
 
     display: grid;
     grid-template-columns: repeat(var(--columns-per-side),1fr) calc(min(800px,95vw)) repeat(var(--columns-per-side),1fr);
-    margin-top: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 
     // only DIRECT children should be in this column by default
     & > * {
@@ -165,7 +178,7 @@ body {
       gap: 3ch;
 
    a {
-      color: inherit;
+      // color: inherit;
       border: none;
       text-decoration: none;
         margin-bottom: 5rem;
@@ -275,7 +288,7 @@ main {
 		text-decoration: none;
 		border-bottom: 1px solid var(--text);
                 &:visited {
-                  color:inherit;
+                  // color:inherit;
                 }
 	}
 
