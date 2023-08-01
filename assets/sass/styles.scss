@@ -153,6 +153,12 @@ body {
 		color: var(--text);
 	}
 
+	&:hover {
+		background-color: var(--text);
+		transition: .2s;
+		color: var(--background);
+	}
+
       }
     } // nav
 
@@ -176,7 +182,22 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3ch;
+    }
 
+    .in-progress-container {
+	picture {
+	    
+	    img {
+		height: fit-content;
+		width: 60%;
+		
+	    }
+		
+	}
+	
+    }
+	
+    
    a {
       // color: inherit;
       border: none;
@@ -236,11 +257,12 @@ body {
           .post-link {
             color: hsl(var(--test) / 0.5);
           }
-        }
+  }
       } // article
   } // a 
-    } // main#home
-  } // main
+    
+
+} // main
 }
 
 nav {
@@ -255,11 +277,7 @@ nav {
 	margin-left: 0%;
 	// height: 100vh;
 
-	a:hover {
-		background-color: var(--text);
-		transition: .2s;
-		color: var(--background);
-	}
+
 
 	#name {
 		writing-mode: sideways-lr;
