@@ -16,3 +16,72 @@ navOrder: 1
   </picture>
   
 </div>
+
+
+{% assign home-posts = site.tags.home %}
+{% assign completed-projects = site.tags.home | where: "tags", "completed" %}
+{% assign wip-projects = site.tags.home | where: "tags", "wip" %}
+ 
+<main id="home">
+
+  <h2>Completed Projects</h2>
+  <div class="home-grid">
+    {% for completed-proj in completed-projects %}
+    <a href="{{completed-proj.url}}">
+      <article class="project">
+        <img class="main-img" src="/assets/images/{{completed-proj.thumb}}">
+          <div class="title">{{completed-proj.title}}</div>
+          <div class="medium">{{completed-proj.medium}}</div>
+          <!--<div class="post-link"><a href="{{completed-proj.url}}">Details &rarr;</a></div>-->
+      </article>
+    </a>
+    {% endfor %}
+  </div>
+
+
+<h2>Works In Progress</h2>
+  <div class="home-grid">
+    {% for proj in wip-projects %}
+    <a href="{{proj.url}}">
+       <article class="project">
+            <img class="main-img" src="/assets/images/{{proj.thumb}}">
+            <div class="title">{{proj.title}}</div>
+            <div class="medium">{{proj.medium}}</div>
+<!--                <div class="post-link"><a href="{{proj.url}}">Details &rarr;</a></div> -->
+        </article>
+    </a>
+    {% endfor %}
+  </div>
+  <!-- <article class="project" style="--project-bg: #1c7a18"></article> -->
+</main>
+
+
+
+
+<!--
+
+## Recent Projects
+
+### Keegan Construction
+[![screenshot of keeganconstruction.com](/assets/images/kc-screenshot.png)](htt
+ps://keeganconstruction.com)
+
+Using: React, React Router, webpack, and SCSS.
+
+### FADE skincare
+[![screenshot of fadeskincare.co](/assets/images/fade-screenshot-2.png)](https://fadeskincare.co)
+
+Using: React, Express, Node, mongoDB, HTML5, CSS3, nginx.
+
+### Rootstalk: A Prairie Journal of Culture, Science, and the Arts
+[![screenshot of rootstalk.grinnell.edu](/assets/images/rt-screenshot.png)](https://rootstalk.grinnell.edu)
+
+Using: Hugo, Lunr.js, jQuery, HTML5, CSS3.
+
+### *Terseness*
+[![screenshot of Terseness](/assets/images/terseness-screenshot.png)](/terseness)
+
+Using: jQuery, HTML5, CSS3, Adobe CC 2019.
+
+-->
+
