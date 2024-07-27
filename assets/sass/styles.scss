@@ -105,13 +105,16 @@ body {
       max-width: 100%;
     }
 
-    #site-name {
+    a#site-name {
       font-size: 3rem;
+      color: inherit;
       
       margin-top: 2rem;
       padding-top: 1rem;
       margin-bottom: 2rem;
       border-top: 0.2rem solid var(--text);
+
+      text-decoration: none;
     }
 
     #site-description {
@@ -183,8 +186,12 @@ body {
 
       grid-column: calc(var(--columns-per-side) + 1);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3ch;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      column-gap: 1.5ch;
+
+      @media screen and (min-width: 500px) {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
 
       a {
         border-bottom: none;
